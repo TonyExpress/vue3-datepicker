@@ -60,7 +60,9 @@ Full props documentation is available at https://icehaunter.github.io/vue3-datep
 | `typeable`               | `Boolean`                                                | `false`              | Allows user to input date manually                                                                                                         |
 | `weekStartsOn`           | `Number`                                                 | 1                    | Day on which the week should start. Number from 0 to 6, where 0 is Sunday and 6 is Saturday. Week starts with a Monday (1) by default      |
 | `clearable`              | `Boolean`                                                | `false`              | Allows clearing the selected date and setting the value to `null`                                                                          |
-| `allowOutsideInterval`   | `Boolean`                                                | `false`              | Allows user to click dates outside of current interval                                                                                     |
+| `allowOutsideInterval`   | `Boolean`                                                | `false`              | Allows user to click dates outside of current interval           
+| `mask`                   | `Boolean`                                  | `false`              | If typeable is true, allows user to input a date into an input field and automatically takes care of inserting separators in the correct format.
+      
 
 ### Events
 
