@@ -11,7 +11,13 @@ All date manipulation and formatting are done via the amazing [`date-fns`](https
 Package is available on NPM: https://www.npmjs.com/package/vue3-datepicker
 
 ```sh
-npm i vue3-datepicker
+npm i TonyExpress/vue3-datepicker
+```
+
+or
+
+```sh
+yarn add TonyExpress/vue3-datepicker
 ```
 
 The component is packaged mainly for use with bundlers, if you require a browser build - post an issue.
