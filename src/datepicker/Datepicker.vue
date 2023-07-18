@@ -396,8 +396,15 @@ export default defineComponent({
     const focus = () => renderView(initialView.value)
 
     const blur = () => {
-      isFocused.value = false
-      renderView()
+      isFocused.value = false;
+
+       const parsedDate = dateParser(inputRef.value!.value);
+
+        if (!isValidDate(parsedDate)) {
+            emit('update:modelValue', null)
+        }
+
+        renderView()
     }
 
     const keyUp = (event: KeyboardEvent) => {
@@ -452,24 +459,31 @@ export default defineComponent({
 
         }
 
-        const parsedDate = parse(
-          inputRef.value!.value,
-          props.inputFormat,
-          new Date(),
-          { locale: props.locale }
-        )
+        const parsedDate = dateParser(inputRef.value!.value);
+
+        //console.log("parsedDate", parsedDate)
 
         // If the date is formatted back same way as it was inputted, then we're not disturbing user input
-        if (
-          isValid(parsedDate) &&
-          input.value ===
-            format(parsedDate, props.inputFormat, { locale: props.locale })
-        ) {
+        if (isValidDate(parsedDate)) {
           input.value = inputRef.value!.value
           emit('update:modelValue', parsedDate)
         }
       }
     }
+
+    const isValidDate = (date: Date) => {
+        return isValid(date) && input.value === format(date, props.inputFormat, { locale: props.locale });
+    };
+    
+    const dateParser = (_text: string) => {
+        return parse(
+          _text,
+          props.inputFormat,
+          new Date(),
+          { locale: props.locale }
+        )
+    };
+
 
     const initialView = computed(() => {
       const startingViewOrder = TIME_RESOLUTIONS.indexOf(props.startingView)
