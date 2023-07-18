@@ -1,6 +1,9 @@
 node_modules
 .DS_Store
 .idea
-dist
+#dist
+/dist/*
+!/dist/*.mjs
+!/dist/*.umd.js
 *.local
 **/.vitepress/cache
