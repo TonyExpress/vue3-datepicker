@@ -1,9 +1,9 @@
 (function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode(".v3dp__popout[data-v-902ed860]{z-index:10;position:absolute;text-align:center;width:17.5em;background-color:var(--popout-bg-color);box-shadow:var(--box-shadow);border-radius:var(--border-radius);padding:8px 0 1em;color:var(--text-color)}.v3dp__popout *[data-v-902ed860]{color:inherit;font-size:inherit;font-weight:inherit}.v3dp__popout[data-v-902ed860] button{background:none;border:none;outline:none}.v3dp__popout[data-v-902ed860] button:not(:disabled){cursor:pointer}.v3dp__heading[data-v-902ed860]{width:100%;display:flex;height:var(--heading-size);line-height:var(--heading-size);font-weight:var(--heading-weight)}.v3dp__heading__button[data-v-902ed860]{background:none;border:none;padding:0;display:flex;justify-content:center;align-items:center;width:var(--heading-size)}button.v3dp__heading__center[data-v-902ed860]:hover,.v3dp__heading__button[data-v-902ed860]:not(:disabled):hover{background-color:var(--heading-hover-color)}.v3dp__heading__center[data-v-902ed860]{flex:1}.v3dp__heading__icon[data-v-902ed860]{height:12px;stroke:var(--arrow-color)}.v3dp__heading__button:disabled .v3dp__heading__icon[data-v-902ed860]{stroke:var(--elem-disabled-color)}.v3dp__subheading[data-v-902ed860],.v3dp__elements[data-v-902ed860]{display:grid;grid-template-columns:var(--popout-column-definition);font-size:var(--elem-font-size)}.v3dp__subheading[data-v-902ed860]{margin-top:1em}.v3dp__divider[data-v-902ed860]{border:1px solid var(--divider-color);border-radius:3px}.v3dp__elements[data-v-902ed860] button:disabled{color:var(--elem-disabled-color)}.v3dp__elements[data-v-902ed860] button{padding:.3em .6em}.v3dp__elements[data-v-902ed860] button span{display:block;line-height:1.9em;height:1.8em;border-radius:var(--elem-border-radius)}.v3dp__elements[data-v-902ed860] button:not(:disabled):hover span{background-color:var(--elem-hover-bg-color);color:var(--elem-hover-color)}.v3dp__elements[data-v-902ed860] button.selected span{background-color:var(--elem-selected-bg-color);color:var(--elem-selected-color)}.v3dp__elements[data-v-902ed860] button.current span{font-weight:var(--elem-current-font-weight);outline:1px solid var(--elem-current-outline-color)}.v3dp__column[data-v-a01d90e1]{display:flex;flex-direction:column;overflow-y:auto;height:190px}.v3dp__datepicker{--popout-bg-color: var(--vdp-bg-color, #fff);--box-shadow: var( --vdp-box-shadow, 0 4px 10px 0 rgba(128, 144, 160, .1), 0 0 1px 0 rgba(128, 144, 160, .81) );--text-color: var(--vdp-text-color, #000000);--border-radius: var(--vdp-border-radius, 3px);--heading-size: var(--vdp-heading-size, 2.5em);--heading-weight: var(--vdp-heading-weight, bold);--heading-hover-color: var(--vdp-heading-hover-color, #eeeeee);--arrow-color: var(--vdp-arrow-color, currentColor);--elem-color: var(--vdp-elem-color, currentColor);--elem-disabled-color: var(--vdp-disabled-color, #d5d9e0);--elem-hover-color: var(--vdp-hover-color, #fff);--elem-hover-bg-color: var(--vdp-hover-bg-color, #0baf74);--elem-selected-color: var(--vdp-selected-color, #fff);--elem-selected-bg-color: var(--vdp-selected-bg-color, #0baf74);--elem-current-outline-color: var(--vdp-current-date-outline-color, #888);--elem-current-font-weight: var(--vdp-current-date-font-weight, bold);--elem-font-size: var(--vdp-elem-font-size, .8em);--elem-border-radius: var(--vdp-elem-border-radius, 3px);--divider-color: var(--vdp-divider-color, var(--elem-disabled-color));position:relative}.v3dp__clearable{display:inline;position:relative;left:-15px;cursor:pointer}")),document.head.appendChild(e)}}catch(o){console.error("vite-plugin-css-injected-by-js",o)}})();
-import { defineComponent as I, openBlock as b, createElementBlock as V, normalizeClass as A, normalizeStyle as ge, withModifiers as B, createElementVNode as f, renderSlot as E, createBlock as W, resolveDynamicComponent as we, withCtx as F, Fragment as N, createCommentVNode as Le, renderList as Q, toDisplayString as q, pushScopeId as $e, popScopeId as Se, computed as u, resolveComponent as C, createTextVNode as x, ref as _, watch as ue, nextTick as _e, watchEffect as ne, withDirectives as T, mergeProps as Ve, vModelText as Oe, vShow as Y, createVNode as K } from "vue";
-import { isValid as L, startOfDecade as qe, endOfDecade as Ce, eachYearOfInterval as Me, getYear as S, getDecade as G, isBefore as U, isAfter as Z, subYears as ye, addYears as ve, startOfYear as Pe, endOfYear as Be, format as X, eachMonthOfInterval as Fe, isSameMonth as le, isSameYear as ce, startOfMonth as he, endOfMonth as be, startOfWeek as Te, endOfWeek as Ee, setDay as Ie, eachDayOfInterval as Re, isSameDay as ie, isWithinInterval as He, startOfDay as je, endOfDay as Ye, subMonths as Ae, addMonths as Ne, set as me, isSameHour as Ue, isSameMinute as Ze, parse as fe, max as We, min as ze } from "date-fns";
-const Ke = ["year", "month", "day", "time", "custom"], Ge = I({
+import { defineComponent as E, openBlock as b, createElementBlock as V, normalizeClass as H, normalizeStyle as pe, withModifiers as P, createElementVNode as f, renderSlot as T, createBlock as N, resolveDynamicComponent as ke, withCtx as B, Fragment as j, createCommentVNode as we, renderList as G, toDisplayString as q, pushScopeId as Le, popScopeId as $e, computed as u, resolveComponent as M, createTextVNode as Q, ref as L, watch as de, nextTick as Se, watchEffect as te, withDirectives as F, mergeProps as _e, vModelText as Ve, vShow as R, createVNode as W } from "vue";
+import { isValid as $, startOfDecade as Oe, endOfDecade as qe, eachYearOfInterval as Ce, getYear as _, getDecade as z, isBefore as Y, isAfter as A, subYears as ge, addYears as ve, startOfYear as Me, endOfYear as Pe, format as J, eachMonthOfInterval as Be, isSameMonth as ne, isSameYear as ue, startOfMonth as ye, endOfMonth as he, startOfWeek as Fe, endOfWeek as Te, setDay as Ee, eachDayOfInterval as Ie, isSameDay as ae, isWithinInterval as Re, startOfDay as He, endOfDay as je, subMonths as Ye, addMonths as Ae, set as ce, isSameHour as Ne, isSameMinute as Ue, parse as fe } from "date-fns";
+const Ze = ["year", "month", "day", "time", "custom"], We = E({
   emits: {
-    elementClick: (e) => L(e),
+    elementClick: (e) => $(e),
     left: () => !0,
     right: () => !0,
     heading: () => !0
@@ -32,16 +32,16 @@ const Ke = ["year", "month", "day", "time", "custom"], Ge = I({
     viewMode: {
       type: String,
       required: !0,
-      validate: (e) => typeof e == "string" && Ke.includes(e)
+      validate: (e) => typeof e == "string" && Ze.includes(e)
     }
   }
 });
-const R = (e, t) => {
-  const r = e.__vccOpts || e;
-  for (const [s, o] of t)
-    r[s] = o;
-  return r;
-}, se = (e) => ($e("data-v-902ed860"), e = e(), Se(), e), Je = { class: "v3dp__heading" }, Qe = ["disabled"], Xe = /* @__PURE__ */ se(() => /* @__PURE__ */ f("svg", {
+const I = (e, t) => {
+  const i = e.__vccOpts || e;
+  for (const [d, r] of t)
+    i[d] = r;
+  return i;
+}, le = (e) => (Le("data-v-902ed860"), e = e(), $e(), e), ze = { class: "v3dp__heading" }, Ke = ["disabled"], Ge = /* @__PURE__ */ le(() => /* @__PURE__ */ f("svg", {
   class: "v3dp__heading__icon",
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 6 8"
@@ -60,7 +60,7 @@ const R = (e, t) => {
       d: "M5 0L1 4l4 4"
     })
   ])
-], -1)), xe = ["disabled"], et = /* @__PURE__ */ se(() => /* @__PURE__ */ f("svg", {
+], -1)), Je = ["disabled"], Qe = /* @__PURE__ */ le(() => /* @__PURE__ */ f("svg", {
   class: "v3dp__heading__icon",
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 6 8"
@@ -79,78 +79,78 @@ const R = (e, t) => {
       d: "M1 8l4-4-4-4"
     })
   ])
-], -1)), tt = { class: "v3dp__body" }, at = { class: "v3dp__subheading" }, nt = /* @__PURE__ */ se(() => /* @__PURE__ */ f("hr", { class: "v3dp__divider" }, null, -1)), it = { class: "v3dp__elements" }, lt = ["disabled", "onClick"];
-function st(e, t, r, s, o, c) {
+], -1)), Xe = { class: "v3dp__body" }, xe = { class: "v3dp__subheading" }, et = /* @__PURE__ */ le(() => /* @__PURE__ */ f("hr", { class: "v3dp__divider" }, null, -1)), tt = { class: "v3dp__elements" }, at = ["disabled", "onClick"];
+function nt(e, t, i, d, r, y) {
   return b(), V("div", {
-    class: A(["v3dp__popout", `v3dp__popout-${e.viewMode}`]),
-    style: ge({ ["--popout-column-definition"]: `repeat(${e.columnCount}, 1fr)` }),
-    onMousedown: t[3] || (t[3] = B(() => {
+    class: H(["v3dp__popout", `v3dp__popout-${e.viewMode}`]),
+    style: pe({ ["--popout-column-definition"]: `repeat(${e.columnCount}, 1fr)` }),
+    onMousedown: t[3] || (t[3] = P(() => {
     }, ["prevent"]))
   }, [
-    f("div", Je, [
+    f("div", ze, [
       f("button", {
         class: "v3dp__heading__button v3dp__heading__button__left",
         disabled: e.leftDisabled,
-        onClick: t[0] || (t[0] = B((i) => e.$emit("left"), ["stop", "prevent"]))
+        onClick: t[0] || (t[0] = P((l) => e.$emit("left"), ["stop", "prevent"]))
       }, [
-        E(e.$slots, "arrow-left", {}, () => [
-          Xe
+        T(e.$slots, "arrow-left", {}, () => [
+          Ge
         ], !0)
-      ], 8, Qe),
-      (b(), W(we(e.headingClickable ? "button" : "span"), {
+      ], 8, Ke),
+      (b(), N(ke(e.headingClickable ? "button" : "span"), {
         class: "v3dp__heading__center",
-        onClick: t[1] || (t[1] = B((i) => e.$emit("heading"), ["stop", "prevent"]))
+        onClick: t[1] || (t[1] = P((l) => e.$emit("heading"), ["stop", "prevent"]))
       }, {
-        default: F(() => [
-          E(e.$slots, "heading", {}, void 0, !0)
+        default: B(() => [
+          T(e.$slots, "heading", {}, void 0, !0)
         ]),
         _: 3
       })),
       f("button", {
         class: "v3dp__heading__button v3dp__heading__button__right",
         disabled: e.rightDisabled,
-        onClick: t[2] || (t[2] = B((i) => e.$emit("right"), ["stop", "prevent"]))
+        onClick: t[2] || (t[2] = P((l) => e.$emit("right"), ["stop", "prevent"]))
       }, [
-        E(e.$slots, "arrow-right", {}, () => [
-          et
+        T(e.$slots, "arrow-right", {}, () => [
+          Qe
         ], !0)
-      ], 8, xe)
+      ], 8, Je)
     ]),
-    f("div", tt, [
-      "subheading" in e.$slots ? (b(), V(N, { key: 0 }, [
-        f("div", at, [
-          E(e.$slots, "subheading", {}, void 0, !0)
+    f("div", Xe, [
+      "subheading" in e.$slots ? (b(), V(j, { key: 0 }, [
+        f("div", xe, [
+          T(e.$slots, "subheading", {}, void 0, !0)
         ]),
-        nt
-      ], 64)) : Le("", !0),
-      f("div", it, [
-        E(e.$slots, "body", {}, () => [
-          (b(!0), V(N, null, Q(e.items, (i) => (b(), V("button", {
-            key: i.key,
-            disabled: i.disabled,
-            class: A([
+        et
+      ], 64)) : we("", !0),
+      f("div", tt, [
+        T(e.$slots, "body", {}, () => [
+          (b(!0), V(j, null, G(e.items, (l) => (b(), V("button", {
+            key: l.key,
+            disabled: l.disabled,
+            class: H([
               {
-                selected: i.selected,
-                current: i.current
+                selected: l.selected,
+                current: l.current
               },
               `v3dp__element__button__${e.viewMode}`
             ]),
-            onClick: B((a) => e.$emit("elementClick", i.value), ["stop", "prevent"])
+            onClick: P((n) => e.$emit("elementClick", l.value), ["stop", "prevent"])
           }, [
-            f("span", null, q(i.display), 1)
-          ], 10, lt))), 128))
+            f("span", null, q(l.display), 1)
+          ], 10, at))), 128))
         ], !0)
       ])
     ])
   ], 38);
 }
-const ee = /* @__PURE__ */ R(Ge, [["render", st], ["__scopeId", "data-v-902ed860"]]), ot = I({
+const X = /* @__PURE__ */ I(We, [["render", nt], ["__scopeId", "data-v-902ed860"]]), lt = E({
   components: {
-    PickerPopup: ee
+    PickerPopup: X
   },
   emits: {
-    "update:pageDate": (e) => L(e),
-    select: (e) => L(e)
+    "update:pageDate": (e) => $(e),
+    select: (e) => $(e)
   },
   props: {
     selected: {
@@ -171,40 +171,40 @@ const ee = /* @__PURE__ */ R(Ge, [["render", st], ["__scopeId", "data-v-902ed860
     }
   },
   setup(e, { emit: t }) {
-    const r = u(() => qe(e.pageDate)), s = u(() => Ce(e.pageDate)), o = (h, v, l) => !v && !l ? !0 : !(v && S(h) < S(v) || l && S(h) > S(l)), c = u(
-      () => Me({
-        start: r.value,
-        end: s.value
+    const i = u(() => Oe(e.pageDate)), d = u(() => qe(e.pageDate)), r = (D, v, o) => !v && !o ? !0 : !(v && _(D) < _(v) || o && _(D) > _(o)), y = u(
+      () => Ce({
+        start: i.value,
+        end: d.value
       }).map(
-        (h) => ({
-          value: h,
-          key: String(S(h)),
-          display: S(h),
-          selected: !!e.selected && S(h) === S(e.selected),
-          disabled: !o(h, e.lowerLimit, e.upperLimit)
+        (D) => ({
+          value: D,
+          key: String(_(D)),
+          display: _(D),
+          selected: !!e.selected && _(D) === _(e.selected),
+          disabled: !r(D, e.lowerLimit, e.upperLimit)
         })
       )
-    ), i = u(() => {
-      const h = S(r.value), v = S(s.value);
-      return `${h} - ${v}`;
-    }), a = u(
-      () => e.lowerLimit && (G(e.lowerLimit) === G(e.pageDate) || U(e.pageDate, e.lowerLimit))
-    ), p = u(
-      () => e.upperLimit && (G(e.upperLimit) === G(e.pageDate) || Z(e.pageDate, e.upperLimit))
+    ), l = u(() => {
+      const D = _(i.value), v = _(d.value);
+      return `${D} - ${v}`;
+    }), n = u(
+      () => e.lowerLimit && (z(e.lowerLimit) === z(e.pageDate) || Y(e.pageDate, e.lowerLimit))
+    ), h = u(
+      () => e.upperLimit && (z(e.upperLimit) === z(e.pageDate) || A(e.pageDate, e.upperLimit))
     );
     return {
-      years: c,
-      heading: i,
-      leftDisabled: a,
-      rightDisabled: p,
-      previousPage: () => t("update:pageDate", ye(e.pageDate, 10)),
+      years: y,
+      heading: l,
+      leftDisabled: n,
+      rightDisabled: h,
+      previousPage: () => t("update:pageDate", ge(e.pageDate, 10)),
       nextPage: () => t("update:pageDate", ve(e.pageDate, 10))
     };
   }
 });
-function rt(e, t, r, s, o, c) {
-  const i = C("picker-popup");
-  return b(), W(i, {
+function it(e, t, i, d, r, y) {
+  const l = M("picker-popup");
+  return b(), N(l, {
     columnCount: 3,
     leftDisabled: e.leftDisabled,
     rightDisabled: e.rightDisabled,
@@ -212,21 +212,21 @@ function rt(e, t, r, s, o, c) {
     viewMode: "year",
     onLeft: e.previousPage,
     onRight: e.nextPage,
-    onElementClick: t[0] || (t[0] = (a) => e.$emit("select", a))
+    onElementClick: t[0] || (t[0] = (n) => e.$emit("select", n))
   }, {
-    heading: F(() => [
-      x(q(e.heading), 1)
+    heading: B(() => [
+      Q(q(e.heading), 1)
     ]),
     _: 1
   }, 8, ["leftDisabled", "rightDisabled", "items", "onLeft", "onRight"]);
 }
-const dt = /* @__PURE__ */ R(ot, [["render", rt]]), ut = I({
+const st = /* @__PURE__ */ I(lt, [["render", it]]), ot = E({
   components: {
-    PickerPopup: ee
+    PickerPopup: X
   },
   emits: {
-    "update:pageDate": (e) => L(e),
-    select: (e) => L(e),
+    "update:pageDate": (e) => $(e),
+    select: (e) => $(e),
     back: () => !0
   },
   props: {
@@ -260,41 +260,41 @@ const dt = /* @__PURE__ */ R(ot, [["render", rt]]), ut = I({
     }
   },
   setup(e, { emit: t }) {
-    const r = u(() => Pe(e.pageDate)), s = u(() => Be(e.pageDate)), o = u(
-      () => (v) => X(v, e.format, {
+    const i = u(() => Me(e.pageDate)), d = u(() => Pe(e.pageDate)), r = u(
+      () => (v) => J(v, e.format, {
         locale: e.locale
       })
-    ), c = (v, l, D) => !l && !D ? !0 : !(l && U(v, he(l)) || D && Z(v, be(D))), i = u(
-      () => Fe({
-        start: r.value,
-        end: s.value
+    ), y = (v, o, k) => !o && !k ? !0 : !(o && Y(v, ye(o)) || k && A(v, he(k))), l = u(
+      () => Be({
+        start: i.value,
+        end: d.value
       }).map(
         (v) => ({
           value: v,
-          display: o.value(v),
-          key: o.value(v),
-          selected: !!e.selected && le(e.selected, v),
-          disabled: !c(v, e.lowerLimit, e.upperLimit)
+          display: r.value(v),
+          key: r.value(v),
+          selected: !!e.selected && ne(e.selected, v),
+          disabled: !y(v, e.lowerLimit, e.upperLimit)
         })
       )
-    ), a = u(() => S(r.value)), p = u(
-      () => e.lowerLimit && (ce(e.lowerLimit, e.pageDate) || U(e.pageDate, e.lowerLimit))
-    ), O = u(
-      () => e.upperLimit && (ce(e.upperLimit, e.pageDate) || Z(e.pageDate, e.upperLimit))
+    ), n = u(() => _(i.value)), h = u(
+      () => e.lowerLimit && (ue(e.lowerLimit, e.pageDate) || Y(e.pageDate, e.lowerLimit))
+    ), S = u(
+      () => e.upperLimit && (ue(e.upperLimit, e.pageDate) || A(e.pageDate, e.upperLimit))
     );
     return {
-      months: i,
-      heading: a,
-      leftDisabled: p,
-      rightDisabled: O,
-      previousPage: () => t("update:pageDate", ye(e.pageDate, 1)),
+      months: l,
+      heading: n,
+      leftDisabled: h,
+      rightDisabled: S,
+      previousPage: () => t("update:pageDate", ge(e.pageDate, 1)),
       nextPage: () => t("update:pageDate", ve(e.pageDate, 1))
     };
   }
 });
-function ct(e, t, r, s, o, c) {
-  const i = C("picker-popup");
-  return b(), W(i, {
+function rt(e, t, i, d, r, y) {
+  const l = M("picker-popup");
+  return b(), N(l, {
     headingClickable: "",
     columnCount: 3,
     items: e.months,
@@ -303,22 +303,22 @@ function ct(e, t, r, s, o, c) {
     viewMode: "month",
     onLeft: e.previousPage,
     onRight: e.nextPage,
-    onHeading: t[0] || (t[0] = (a) => e.$emit("back")),
-    onElementClick: t[1] || (t[1] = (a) => e.$emit("select", a))
+    onHeading: t[0] || (t[0] = (n) => e.$emit("back")),
+    onElementClick: t[1] || (t[1] = (n) => e.$emit("select", n))
   }, {
-    heading: F(() => [
-      x(q(e.heading), 1)
+    heading: B(() => [
+      Q(q(e.heading), 1)
     ]),
     _: 1
   }, 8, ["items", "leftDisabled", "rightDisabled", "onLeft", "onRight"]);
 }
-const mt = /* @__PURE__ */ R(ut, [["render", ct]]), ft = I({
+const dt = /* @__PURE__ */ I(ot, [["render", rt]]), ut = E({
   components: {
-    PickerPopup: ee
+    PickerPopup: X
   },
   emits: {
-    "update:pageDate": (e) => L(e),
-    select: (e) => L(e),
+    "update:pageDate": (e) => $(e),
+    select: (e) => $(e),
     back: () => !0
   },
   props: {
@@ -374,69 +374,69 @@ const mt = /* @__PURE__ */ R(ut, [["render", ct]]), ft = I({
     }
   },
   setup(e, { emit: t }) {
-    const r = u(
-      () => (g) => (y) => X(y, g, {
+    const i = u(
+      () => (m) => (p) => J(p, m, {
         locale: e.locale,
         weekStartsOn: e.weekStartsOn
       })
-    ), s = u(() => he(e.pageDate)), o = u(() => be(e.pageDate)), c = u(() => ({
-      start: s.value,
-      end: o.value
-    })), i = u(() => ({
-      start: Te(s.value, {
+    ), d = u(() => ye(e.pageDate)), r = u(() => he(e.pageDate)), y = u(() => ({
+      start: d.value,
+      end: r.value
+    })), l = u(() => ({
+      start: Fe(d.value, {
         weekStartsOn: e.weekStartsOn
       }),
-      end: Ee(o.value, {
+      end: Te(r.value, {
         weekStartsOn: e.weekStartsOn
       })
-    })), a = u(() => {
-      const g = e.weekStartsOn, y = r.value(e.weekdayFormat);
-      return Array.from(Array(7)).map((m, k) => (g + k) % 7).map(
-        (m) => Ie(/* @__PURE__ */ new Date(), m, {
+    })), n = u(() => {
+      const m = e.weekStartsOn, p = i.value(e.weekdayFormat);
+      return Array.from(Array(7)).map((c, w) => (m + w) % 7).map(
+        (c) => Ee(/* @__PURE__ */ new Date(), c, {
           weekStartsOn: e.weekStartsOn
         })
-      ).map(y);
-    }), p = (g, y, m, k) => {
-      var H, j;
-      return (H = k == null ? void 0 : k.dates) != null && H.some((z) => ie(g, z)) || (j = k == null ? void 0 : k.predicate) != null && j.call(k, g) ? !1 : !y && !m ? !0 : !(y && U(g, je(y)) || m && Z(g, Ye(m)));
-    }, O = u(() => {
-      const g = /* @__PURE__ */ new Date(), y = r.value(e.format);
-      return Re(i.value).map(
-        (m) => ({
-          value: m,
-          display: y(m),
-          selected: !!e.selected && ie(e.selected, m),
-          current: ie(g, m),
-          disabled: !e.allowOutsideInterval && !He(m, c.value) || !p(
-            m,
+      ).map(p);
+    }), h = (m, p, c, w) => {
+      var U, Z;
+      return (U = w == null ? void 0 : w.dates) != null && U.some((x) => ae(m, x)) || (Z = w == null ? void 0 : w.predicate) != null && Z.call(w, m) ? !1 : !p && !c ? !0 : !(p && Y(m, He(p)) || c && A(m, je(c)));
+    }, S = u(() => {
+      const m = /* @__PURE__ */ new Date(), p = i.value(e.format);
+      return Ie(l.value).map(
+        (c) => ({
+          value: c,
+          display: p(c),
+          selected: !!e.selected && ae(e.selected, c),
+          current: ae(m, c),
+          disabled: !e.allowOutsideInterval && !Re(c, y.value) || !h(
+            c,
             e.lowerLimit,
             e.upperLimit,
             e.disabledDates
           ),
-          key: r.value("yyyy-MM-dd")(m)
+          key: i.value("yyyy-MM-dd")(c)
         })
       );
-    }), d = u(
-      () => r.value(e.headingFormat)(e.pageDate)
-    ), h = u(
-      () => e.lowerLimit && (le(e.lowerLimit, e.pageDate) || U(e.pageDate, e.lowerLimit))
+    }), s = u(
+      () => i.value(e.headingFormat)(e.pageDate)
+    ), D = u(
+      () => e.lowerLimit && (ne(e.lowerLimit, e.pageDate) || Y(e.pageDate, e.lowerLimit))
     ), v = u(
-      () => e.upperLimit && (le(e.upperLimit, e.pageDate) || Z(e.pageDate, e.upperLimit))
+      () => e.upperLimit && (ne(e.upperLimit, e.pageDate) || A(e.pageDate, e.upperLimit))
     );
     return {
-      weekDays: a,
-      days: O,
-      heading: d,
-      leftDisabled: h,
+      weekDays: n,
+      days: S,
+      heading: s,
+      leftDisabled: D,
       rightDisabled: v,
-      previousPage: () => t("update:pageDate", Ae(e.pageDate, 1)),
-      nextPage: () => t("update:pageDate", Ne(e.pageDate, 1))
+      previousPage: () => t("update:pageDate", Ye(e.pageDate, 1)),
+      nextPage: () => t("update:pageDate", Ae(e.pageDate, 1))
     };
   }
 });
-function pt(e, t, r, s, o, c) {
-  const i = C("picker-popup");
-  return b(), W(i, {
+function ct(e, t, i, d, r, y) {
+  const l = M("picker-popup");
+  return b(), N(l, {
     headingClickable: "",
     leftDisabled: e.leftDisabled,
     rightDisabled: e.rightDisabled,
@@ -444,38 +444,38 @@ function pt(e, t, r, s, o, c) {
     viewMode: "day",
     onLeft: e.previousPage,
     onRight: e.nextPage,
-    onHeading: t[0] || (t[0] = (a) => e.$emit("back")),
-    onElementClick: t[1] || (t[1] = (a) => e.$emit("select", a))
+    onHeading: t[0] || (t[0] = (n) => e.$emit("back")),
+    onElementClick: t[1] || (t[1] = (n) => e.$emit("select", n))
   }, {
-    heading: F(() => [
-      x(q(e.heading), 1)
+    heading: B(() => [
+      Q(q(e.heading), 1)
     ]),
-    subheading: F(() => [
-      (b(!0), V(N, null, Q(e.weekDays, (a, p) => (b(), V("span", {
-        key: a,
-        class: A(`v3dp__subheading__weekday__${p}`)
-      }, q(a), 3))), 128))
+    subheading: B(() => [
+      (b(!0), V(j, null, G(e.weekDays, (n, h) => (b(), V("span", {
+        key: n,
+        class: H(`v3dp__subheading__weekday__${h}`)
+      }, q(n), 3))), 128))
     ]),
     _: 1
   }, 8, ["leftDisabled", "rightDisabled", "items", "onLeft", "onRight"]);
 }
-const gt = /* @__PURE__ */ R(ft, [["render", pt]]);
-function pe(e, t) {
-  const r = e.getBoundingClientRect(), s = {
+const ft = /* @__PURE__ */ I(ut, [["render", ct]]);
+function me(e, t) {
+  const i = e.getBoundingClientRect(), d = {
     height: e.clientHeight,
     width: e.clientWidth
-  }, o = t.getBoundingClientRect();
-  if (!(o.top >= r.top && o.bottom <= r.top + s.height)) {
-    const i = o.top - r.top, a = o.bottom - r.bottom;
-    Math.abs(i) < Math.abs(a) ? e.scrollTop += i : e.scrollTop += a;
+  }, r = t.getBoundingClientRect();
+  if (!(r.top >= i.top && r.bottom <= i.top + d.height)) {
+    const l = r.top - i.top, n = r.bottom - i.bottom;
+    Math.abs(l) < Math.abs(n) ? e.scrollTop += l : e.scrollTop += n;
   }
 }
-const yt = I({
+const mt = E({
   components: {
-    PickerPopup: ee
+    PickerPopup: X
   },
   emits: {
-    select: (e) => L(e),
+    select: (e) => $(e),
     back: () => !0
   },
   props: {
@@ -497,136 +497,133 @@ const yt = I({
     }
   },
   setup(e, { emit: t }) {
-    const r = _(null), s = _(null), o = u(() => e.pageDate ?? e.selected), c = _(o.value.getHours()), i = _(o.value.getMinutes());
-    ue(
+    const i = L(null), d = L(null), r = u(() => e.pageDate ?? e.selected), y = L(r.value.getHours()), l = L(r.value.getMinutes());
+    de(
       () => e.selected,
-      (l) => {
-        let D = 0, g = 0;
-        l && (D = l.getHours(), g = l.getMinutes()), c.value = D, i.value = g;
+      (o) => {
+        let k = 0, m = 0;
+        o && (k = o.getHours(), m = o.getMinutes()), y.value = k, l.value = m;
       }
     );
-    const a = u(
+    const n = u(
       () => [...Array(24).keys()].map(
-        (l) => ({
-          value: l,
-          date: me(new Date(o.value.getTime()), {
-            hours: l,
-            minutes: i.value,
+        (o) => ({
+          value: o,
+          date: ce(new Date(r.value.getTime()), {
+            hours: o,
+            minutes: l.value,
             seconds: 0
           }),
-          selected: c.value === l,
-          ref: _(null)
+          selected: y.value === o,
+          ref: L(null)
         })
       )
-    ), p = u(
-      () => [...Array(60).keys()].map((l) => ({
-        value: l,
-        date: me(new Date(o.value.getTime()), {
-          hours: c.value,
-          minutes: l,
+    ), h = u(
+      () => [...Array(60).keys()].map((o) => ({
+        value: o,
+        date: ce(new Date(r.value.getTime()), {
+          hours: y.value,
+          minutes: o,
           seconds: 0
         }),
-        selected: i.value === l,
-        ref: _(null)
+        selected: l.value === o,
+        ref: L(null)
       }))
-    ), O = (l) => {
-      i.value = l.value, t("select", l.date);
-    }, d = () => {
-      const l = a.value.find(
-        (g) => {
-          var y, m;
-          return ((m = (y = g.ref.value) == null ? void 0 : y.classList) == null ? void 0 : m.contains("selected")) ?? !1;
+    ), S = (o) => {
+      l.value = o.value, t("select", o.date);
+    }, s = () => {
+      const o = n.value.find(
+        (m) => {
+          var p, c;
+          return ((c = (p = m.ref.value) == null ? void 0 : p.classList) == null ? void 0 : c.contains("selected")) ?? !1;
         }
-      ), D = p.value.find(
-        (g) => {
-          var y, m;
-          return ((m = (y = g.ref.value) == null ? void 0 : y.classList) == null ? void 0 : m.contains("selected")) ?? !1;
+      ), k = h.value.find(
+        (m) => {
+          var p, c;
+          return ((c = (p = m.ref.value) == null ? void 0 : p.classList) == null ? void 0 : c.contains("selected")) ?? !1;
         }
       );
-      l && D && (pe(r.value, l.ref.value), pe(s.value, D.ref.value));
+      o && k && (me(i.value, o.ref.value), me(d.value, k.ref.value));
     };
-    return ue(
+    return de(
       () => e.visible,
-      (l) => {
-        l && _e(d);
+      (o) => {
+        o && Se(s);
       }
     ), {
-      hoursListRef: r,
-      minutesListRef: s,
-      hours: c,
-      minutes: i,
-      hoursList: a,
-      minutesList: p,
-      padStartZero: (l) => `0${l}`.substr(-2),
-      selectMinutes: O,
-      isEnabled: (l) => {
-        var D, g, y, m;
-        return !((g = (D = e.disabledTime) == null ? void 0 : D.dates) != null && g.some(
-          (k) => Ue(l, k) && Ze(l, k)
-        ) || (m = (y = e.disabledTime) == null ? void 0 : y.predicate) != null && m.call(y, l));
+      hoursListRef: i,
+      minutesListRef: d,
+      hours: y,
+      minutes: l,
+      hoursList: n,
+      minutesList: h,
+      padStartZero: (o) => `0${o}`.substr(-2),
+      selectMinutes: S,
+      isEnabled: (o) => {
+        var k, m, p, c;
+        return !((m = (k = e.disabledTime) == null ? void 0 : k.dates) != null && m.some(
+          (w) => Ne(o, w) && Ue(o, w)
+        ) || (c = (p = e.disabledTime) == null ? void 0 : p.predicate) != null && c.call(p, o));
       },
-      scroll: d
+      scroll: s
     };
   }
 });
-const vt = {
+const pt = {
   ref: "hoursListRef",
   class: "v3dp__column"
-}, ht = ["disabled", "onClick"], bt = {
+}, gt = ["disabled", "onClick"], vt = {
   ref: "minutesListRef",
   class: "v3dp__column"
-}, Dt = ["disabled", "onClick"];
-function kt(e, t, r, s, o, c) {
-  const i = C("picker-popup");
-  return b(), W(i, {
+}, yt = ["disabled", "onClick"];
+function ht(e, t, i, d, r, y) {
+  const l = M("picker-popup");
+  return b(), N(l, {
     headingClickable: "",
     columnCount: 2,
     leftDisabled: !0,
     rightDisabled: !0,
     viewMode: "time",
-    onHeading: t[0] || (t[0] = (a) => e.$emit("back"))
+    onHeading: t[0] || (t[0] = (n) => e.$emit("back"))
   }, {
-    heading: F(() => [
-      x(q(e.padStartZero(e.hours)) + ":" + q(e.padStartZero(e.minutes)), 1)
+    heading: B(() => [
+      Q(q(e.padStartZero(e.hours)) + ":" + q(e.padStartZero(e.minutes)), 1)
     ]),
-    body: F(() => [
-      f("div", vt, [
-        (b(!0), V(N, null, Q(e.hoursList, (a) => (b(), V("button", {
-          key: a.value,
+    body: B(() => [
+      f("div", pt, [
+        (b(!0), V(j, null, G(e.hoursList, (n) => (b(), V("button", {
+          key: n.value,
           ref_for: !0,
-          ref: a.ref,
-          class: A([{ selected: a.selected }, "v3dp__element_button__hour"]),
-          disabled: !e.isEnabled(a.date),
-          onClick: B((p) => e.hours = a.value, ["stop", "prevent"])
+          ref: n.ref,
+          class: H([{ selected: n.selected }, "v3dp__element_button__hour"]),
+          disabled: !e.isEnabled(n.date),
+          onClick: P((h) => e.hours = n.value, ["stop", "prevent"])
         }, [
-          f("span", null, q(e.padStartZero(a.value)), 1)
-        ], 10, ht))), 128))
+          f("span", null, q(e.padStartZero(n.value)), 1)
+        ], 10, gt))), 128))
       ], 512),
-      f("div", bt, [
-        (b(!0), V(N, null, Q(e.minutesList, (a) => (b(), V("button", {
-          key: a.value,
+      f("div", vt, [
+        (b(!0), V(j, null, G(e.minutesList, (n) => (b(), V("button", {
+          key: n.value,
           ref_for: !0,
-          ref: a.ref,
-          class: A([{ selected: a.selected }, "v3dp__element_button__minute"]),
-          disabled: !e.isEnabled(a.date),
-          onClick: B((p) => e.selectMinutes(a), ["stop", "prevent"])
+          ref: n.ref,
+          class: H([{ selected: n.selected }, "v3dp__element_button__minute"]),
+          disabled: !e.isEnabled(n.date),
+          onClick: P((h) => e.selectMinutes(n), ["stop", "prevent"])
         }, [
-          f("span", null, q(e.padStartZero(a.value)), 1)
-        ], 10, Dt))), 128))
+          f("span", null, q(e.padStartZero(n.value)), 1)
+        ], 10, yt))), 128))
       ], 512)
     ]),
     _: 1
   });
 }
-const wt = /* @__PURE__ */ R(yt, [["render", kt], ["__scopeId", "data-v-a01d90e1"]]), J = ["time", "day", "month", "year"], Lt = (e, t, r = void 0) => {
-  let s = r || /* @__PURE__ */ new Date();
-  return e && (s = We([e, s])), t && (s = ze([t, s])), s;
-}, $t = I({
+const Dt = /* @__PURE__ */ I(mt, [["render", ht], ["__scopeId", "data-v-a01d90e1"]]), K = ["time", "day", "month", "year"], bt = E({
   components: {
-    YearPicker: dt,
-    MonthPicker: mt,
-    DayPicker: gt,
-    TimePicker: wt
+    YearPicker: st,
+    MonthPicker: dt,
+    DayPicker: ft,
+    TimePicker: Dt
   },
   inheritAttrs: !1,
   props: {
@@ -681,7 +678,7 @@ const wt = /* @__PURE__ */ R(yt, [["render", kt], ["__scopeId", "data-v-a01d90e1
       type: String,
       required: !1,
       default: "day",
-      validate: (e) => typeof e == "string" && J.includes(e)
+      validate: (e) => typeof e == "string" && K.includes(e)
     },
     /**
      * Date which should be the "center" of the initial view.
@@ -785,7 +782,7 @@ const wt = /* @__PURE__ */ R(yt, [["render", kt], ["__scopeId", "data-v-a01d90e1
       type: String,
       required: !1,
       default: "day",
-      validate: (e) => typeof e == "string" && J.includes(e)
+      validate: (e) => typeof e == "string" && K.includes(e)
     },
     /*
      * If typeable is true,  enables automatic date formatting (masking) as the user types
@@ -797,171 +794,179 @@ const wt = /* @__PURE__ */ R(yt, [["render", kt], ["__scopeId", "data-v-a01d90e1
     }
   },
   emits: {
-    "update:modelValue": (e) => e == null || L(e),
+    "update:modelValue": (e) => e == null || $(e),
     decadePageChanged: (e) => !0,
     yearPageChanged: (e) => !0,
     monthPageChanged: (e) => !0,
     opened: () => !0,
     closed: () => !0
   },
-  setup(e, { emit: t, attrs: r }) {
-    const s = _("none"), o = _(e.startingViewDate), c = _(null), i = _(!1), a = _("");
-    ne(() => {
-      const n = fe(a.value, e.inputFormat, /* @__PURE__ */ new Date(), {
-        locale: e.locale
-      });
-      L(n) && (o.value = n);
-    }), ne(
-      () => a.value = e.modelValue && L(e.modelValue) ? X(e.modelValue, e.inputFormat, {
+  setup(e, { emit: t }) {
+    const i = L("none"), d = L(e.startingViewDate), r = L(null), y = L(!1), l = L(!1), n = L("");
+    te(() => {
+      const a = fe(n.value, e.inputFormat, /* @__PURE__ */ new Date(), { locale: e.locale });
+      $(a) && (d.value = a);
+    }), te(
+      () => n.value = e.modelValue && $(e.modelValue) ? J(e.modelValue, e.inputFormat, {
         locale: e.locale
       }) : ""
     );
-    const p = (n = "none") => {
-      e.disabled || (n !== "none" && s.value === "none" && (o.value = e.modelValue || Lt(e.lowerLimit, e.upperLimit, o.value)), s.value = n, t(n !== "none" ? "opened" : "closed"));
+    const h = () => {
+      l.value || (t("opened"), l.value = !0);
+    }, S = () => {
+      l.value && (t("closed"), l.value = !1);
+    }, s = (a = "none") => {
+      e.disabled || (a !== "none" && i.value === "none" && (d.value = e.modelValue ? e.modelValue : e.startingViewDate), i.value = a, a !== "none" ? h() : S());
     };
-    ne(() => {
-      e.disabled && (s.value = "none");
+    te(() => {
+      e.disabled && (i.value = "none", l.value = !1);
     });
-    const O = (n, w) => {
-      o.value = w, n === "year" ? t("decadePageChanged", w) : n === "month" ? t("yearPageChanged", w) : n === "day" && t("monthPageChanged", w);
-    }, d = (n) => {
-      o.value = n, e.minimumView === "year" ? (p("none"), t("update:modelValue", n)) : s.value = "month";
-    }, h = (n) => {
-      o.value = n, e.minimumView === "month" ? (p("none"), t("update:modelValue", n)) : s.value = "day";
-    }, v = (n) => {
-      o.value = n, e.minimumView === "day" ? (p("none"), t("update:modelValue", n)) : s.value = "time";
-    }, l = (n) => {
-      p("none"), t("update:modelValue", n);
-    }, D = () => {
-      e.clearable && (p("none"), t("update:modelValue", null), o.value = e.startingViewDate);
-    }, g = () => i.value = !0, y = () => p(z.value), m = () => {
-      i.value = !1;
-      const n = j(c.value.value);
-      H(n) || t("update:modelValue", null), p();
-    }, k = (n) => {
-      const w = n.keyCode ? n.keyCode : n.which;
+    const D = (a, g) => {
+      d.value = g, a === "year" ? t("decadePageChanged", g) : a === "month" ? t("yearPageChanged", g) : a === "day" && t("monthPageChanged", g);
+    }, v = (a) => {
+      d.value = a, e.minimumView === "year" ? (s("none"), t("update:modelValue", a)) : i.value = "month";
+    }, o = (a) => {
+      d.value = a, e.minimumView === "month" ? (s("none"), t("update:modelValue", a)) : i.value = "day";
+    }, k = (a) => {
+      d.value = a, e.minimumView === "day" ? (s("none"), t("update:modelValue", a)) : i.value = "time";
+    }, m = (a) => {
+      s("none"), t("update:modelValue", a);
+    }, p = () => {
+      e.clearable && (s("none"), t("update:modelValue", null), d.value = e.startingViewDate);
+    }, c = () => y.value = !0, w = () => {
+      s(oe.value), h();
+    }, U = () => {
+      y.value = !1;
+      const a = se(r.value.value);
+      ie(a) || t("update:modelValue", null), s(), S();
+    }, Z = (a) => {
+      if (e.typeable && e.mask && ![a.key, a.code].includes("Backspace")) {
+        let g = r.value.value;
+        const O = a.key;
+        if ("0123456789".includes(O)) {
+          const C = re.find((ee) => g.length === ee.idx);
+          C && (g += C.char), g += O;
+        } else {
+          const C = re.find((ee) => g.length === ee.idx);
+          C && (g += C.char);
+        }
+        return r.value.value = g, a.preventDefault(), !1;
+      }
+    }, x = (a) => {
+      const g = a.keyCode ? a.keyCode : a.which;
       if ([
         27,
         // escape
         13
         // enter
-      ].includes(w) && c.value.blur(), e.typeable) {
-        if (e.mask && ![n.key, n.code].includes("Backspace")) {
-          let $ = c.value.value;
-          const re = n.key;
-          if ("0123456789".includes(re)) {
-            $ = $.slice(0, -1);
-            const P = te.find((ae) => $.length === ae.idx);
-            P && ($ += P.char), $ += re;
-          } else {
-            const P = te.find((ae) => $.length === ae.idx + 1);
-            P && ($ = $.slice(0, -1) + P.char);
-          }
-          const de = te.find((P) => $.length === P.idx);
-          de && ($ += de.char), c.value.value = $;
-        }
-        const oe = j(c.value.value);
-        H(oe) && (a.value = c.value.value, t("update:modelValue", oe));
+      ].includes(g) && r.value.blur(), e.typeable) {
+        const C = se(r.value.value);
+        ie(C) && (n.value = r.value.value, t("update:modelValue", C));
       }
-    }, H = (n) => L(n) && a.value === X(n, e.inputFormat, { locale: e.locale }), j = (n) => fe(
-      n,
+    }, ie = (a) => {
+      let g = r.value.value;
+      return $(a) && g === J(a, e.inputFormat, { locale: e.locale });
+    }, se = (a) => fe(
+      a,
       e.inputFormat,
       /* @__PURE__ */ new Date(),
       { locale: e.locale }
-    ), z = u(() => {
-      const n = J.indexOf(e.startingView), w = J.indexOf(e.minimumView);
-      return n < w ? e.minimumView : e.startingView;
-    }), De = (n) => Object.fromEntries(
-      Object.entries(n ?? {}).filter(([w, M]) => w.startsWith("--"))
-    ), ke = () => e.startingView === "time" && e.minimumView === "time" ? null : s.value = "day", te = ((n) => {
-      const w = [];
-      for (let M = 0; M < n.length; M++)
-        /^[0-9a-zA-Z]+$/.test(n[M]) || w.push({ idx: M, char: n[M] });
-      return w;
+    ), oe = u(() => {
+      const a = K.indexOf(e.startingView), g = K.indexOf(e.minimumView);
+      return a < g ? e.minimumView : e.startingView;
+    }), De = (a) => Object.fromEntries(
+      Object.entries(a ?? {}).filter(([g, O]) => g.startsWith("--"))
+    ), be = () => e.startingView === "time" && e.minimumView === "time" ? null : i.value = "day", re = ((a) => {
+      const g = [];
+      for (let O = 0; O < a.length; O++)
+        /^[0-9a-zA-Z]+$/.test(a[O]) || g.push({ idx: O, char: a[O] });
+      return g;
     })(e.inputFormat);
     return {
-      blur: m,
-      focus: y,
-      click: g,
-      input: a,
-      inputRef: c,
-      pageDate: o,
-      renderView: p,
-      updatePageDate: O,
-      selectYear: d,
-      selectMonth: h,
-      selectDay: v,
-      selectTime: l,
-      keyUp: k,
-      viewShown: s,
-      goBackFromTimepicker: ke,
-      clearModelValue: D,
-      initialView: z,
-      log: (n) => console.log(n),
+      blur: U,
+      focus: w,
+      click: c,
+      input: n,
+      inputRef: r,
+      pageDate: d,
+      renderView: s,
+      updatePageDate: D,
+      selectYear: v,
+      selectMonth: o,
+      selectDay: k,
+      selectTime: m,
+      keyUp: x,
+      keyDown: Z,
+      viewShown: i,
+      goBackFromTimepicker: be,
+      clearModelValue: p,
+      initialView: oe,
+      log: (a) => console.log(a),
       variables: De
     };
   }
 });
-const St = { class: "v3dp__input_wrapper" }, _t = ["readonly", "placeholder", "disabled", "tabindex"], Vt = { class: "v3dp__clearable" };
-function Ot(e, t, r, s, o, c) {
-  const i = C("year-picker"), a = C("month-picker"), p = C("day-picker"), O = C("time-picker");
+const kt = { class: "v3dp__input_wrapper" }, wt = ["readonly", "placeholder", "disabled", "tabindex"], Lt = { class: "v3dp__clearable" };
+function $t(e, t, i, d, r, y) {
+  const l = M("year-picker"), n = M("month-picker"), h = M("day-picker"), S = M("time-picker");
   return b(), V("div", {
     class: "v3dp__datepicker",
-    style: ge(e.variables(e.$attrs.style))
+    style: pe(e.variables(e.$attrs.style))
   }, [
-    f("div", St, [
-      T(f("input", Ve({
+    f("div", kt, [
+      F(f("input", _e({
         type: "text",
         ref: "inputRef",
         readonly: !e.typeable,
-        "onUpdate:modelValue": t[0] || (t[0] = (d) => e.input = d)
+        "onUpdate:modelValue": t[0] || (t[0] = (s) => e.input = s)
       }, e.$attrs, {
         placeholder: e.placeholder,
         disabled: e.disabled,
         tabindex: e.disabled ? -1 : 0,
-        onKeyup: t[1] || (t[1] = (...d) => e.keyUp && e.keyUp(...d)),
-        onBlur: t[2] || (t[2] = (...d) => e.blur && e.blur(...d)),
-        onFocus: t[3] || (t[3] = (...d) => e.focus && e.focus(...d)),
-        onClick: t[4] || (t[4] = (...d) => e.click && e.click(...d))
-      }), null, 16, _t), [
-        [Oe, e.input]
+        onKeyup: t[1] || (t[1] = (...s) => e.keyUp && e.keyUp(...s)),
+        onKeydown: t[2] || (t[2] = (...s) => e.keyDown && e.keyDown(...s)),
+        onBlur: t[3] || (t[3] = (...s) => e.blur && e.blur(...s)),
+        onFocus: t[4] || (t[4] = (...s) => e.focus && e.focus(...s)),
+        onClick: t[5] || (t[5] = (...s) => e.click && e.click(...s))
+      }), null, 16, wt), [
+        [Ve, e.input]
       ]),
-      T(f("div", Vt, [
-        E(e.$slots, "clear", { onClear: e.clearModelValue }, () => [
+      F(f("div", Lt, [
+        T(e.$slots, "clear", { onClear: e.clearModelValue }, () => [
           f("i", {
-            onClick: t[5] || (t[5] = (d) => e.clearModelValue())
+            onClick: t[6] || (t[6] = (s) => e.clearModelValue())
           }, "x")
         ])
       ], 512), [
-        [Y, e.clearable && e.modelValue]
+        [R, e.clearable && e.modelValue]
       ])
     ]),
-    T(K(i, {
+    F(W(l, {
       pageDate: e.pageDate,
-      "onUpdate:pageDate": t[6] || (t[6] = (d) => e.updatePageDate("year", d)),
+      "onUpdate:pageDate": t[7] || (t[7] = (s) => e.updatePageDate("year", s)),
       selected: e.modelValue,
       lowerLimit: e.lowerLimit,
       upperLimit: e.upperLimit,
       onSelect: e.selectYear
     }, null, 8, ["pageDate", "selected", "lowerLimit", "upperLimit", "onSelect"]), [
-      [Y, e.viewShown === "year"]
+      [R, e.viewShown === "year"]
     ]),
-    T(K(a, {
+    F(W(n, {
       pageDate: e.pageDate,
-      "onUpdate:pageDate": t[7] || (t[7] = (d) => e.updatePageDate("month", d)),
+      "onUpdate:pageDate": t[8] || (t[8] = (s) => e.updatePageDate("month", s)),
       selected: e.modelValue,
       onSelect: e.selectMonth,
       lowerLimit: e.lowerLimit,
       upperLimit: e.upperLimit,
       format: e.monthListFormat,
       locale: e.locale,
-      onBack: t[8] || (t[8] = (d) => e.viewShown = "year")
+      onBack: t[9] || (t[9] = (s) => e.viewShown = "year")
     }, null, 8, ["pageDate", "selected", "onSelect", "lowerLimit", "upperLimit", "format", "locale"]), [
-      [Y, e.viewShown === "month"]
+      [R, e.viewShown === "month"]
     ]),
-    T(K(p, {
+    F(W(h, {
       pageDate: e.pageDate,
-      "onUpdate:pageDate": t[9] || (t[9] = (d) => e.updatePageDate("day", d)),
+      "onUpdate:pageDate": t[10] || (t[10] = (s) => e.updatePageDate("day", s)),
       selected: e.modelValue,
       weekStartsOn: e.weekStartsOn,
       lowerLimit: e.lowerLimit,
@@ -973,11 +978,11 @@ function Ot(e, t, r, s, o, c) {
       "allow-outside-interval": e.allowOutsideInterval,
       format: e.dayFormat,
       onSelect: e.selectDay,
-      onBack: t[10] || (t[10] = (d) => e.viewShown = "month")
+      onBack: t[11] || (t[11] = (s) => e.viewShown = "month")
     }, null, 8, ["pageDate", "selected", "weekStartsOn", "lowerLimit", "upperLimit", "headingFormat", "disabledDates", "locale", "weekdayFormat", "allow-outside-interval", "format", "onSelect"]), [
-      [Y, e.viewShown === "day"]
+      [R, e.viewShown === "day"]
     ]),
-    T(K(O, {
+    F(W(S, {
       pageDate: e.pageDate,
       visible: e.viewShown === "time",
       selected: e.modelValue,
@@ -985,11 +990,11 @@ function Ot(e, t, r, s, o, c) {
       onSelect: e.selectTime,
       onBack: e.goBackFromTimepicker
     }, null, 8, ["pageDate", "visible", "selected", "disabledTime", "onSelect", "onBack"]), [
-      [Y, e.viewShown === "time"]
+      [R, e.viewShown === "time"]
     ])
   ], 4);
 }
-const Pt = /* @__PURE__ */ R($t, [["render", Ot]]);
+const Ot = /* @__PURE__ */ I(bt, [["render", $t]]);
 export {
-  Pt as default
+  Ot as default
 };

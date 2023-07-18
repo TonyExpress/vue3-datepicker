@@ -14,6 +14,7 @@
         :disabled="disabled"
         :tabindex="disabled ? -1 : 0"
         @keyup="keyUp"
+        @keydown="keyDown"
         @blur="blur"
         @focus="focus"
         @click="click"
@@ -289,24 +290,22 @@ export default defineComponent({
     opened: () => true,
     closed: () => true,
   },
-  setup(props, { emit, attrs }) {
+  setup(props, { emit }) {
     const viewShown = ref('none' as 'year' | 'month' | 'day' | 'time' | 'none')
     const pageDate = ref<Date>(props.startingViewDate)
     const inputRef = ref(null as HTMLInputElement | null)
-    const isFocused = ref(false)
+    const isFocused = ref(false);
+    const isOpen = ref(false);
 
     const input = ref('')
     watchEffect(() => {
-      const parsed = parse(input.value, props.inputFormat, new Date(), {
-        locale: props.locale,
-      })
+      const parsed = parse(input.value, props.inputFormat, new Date(), { locale: props.locale })
       if (isValid(parsed)) {
         pageDate.value = parsed
       }
     })
 
-    watchEffect(
-      () =>
+    watchEffect(() =>
         (input.value =
           props.modelValue && isValid(props.modelValue)
             ? format(props.modelValue, props.inputFormat, {
@@ -315,24 +314,45 @@ export default defineComponent({
             : '')
     )
 
+    const emitOpened = () => {
+        if(!isOpen.value){
+            emit('opened');
+            isOpen.value = true;
+        }
+    };
+
+    const emitClosed = () => {
+        if(isOpen.value){
+            emit('closed');
+            isOpen.value = false;
+        }
+    };
+
+
     const renderView = (view: typeof viewShown.value = 'none') => {
       if (!props.disabled) {
-        if (view !== 'none' && viewShown.value === 'none')
-          pageDate.value =
-            props.modelValue ||
-            boundedDate(props.lowerLimit, props.upperLimit, pageDate.value)
+        if (view !== 'none' && viewShown.value === 'none'){
+          pageDate.value = props.modelValue ? props.modelValue : props.startingViewDate;
+          //Replaced the use of boundedDate with props.startingViewDate
+          // This was done to simplify the value assignment logic,
+            // avoiding the bounded date calculation and instead using a predefined value.
+          //  props.modelValue || boundedDate(props.lowerLimit, props.upperLimit, pageDate.value)
+        }
         viewShown.value = view
 
         if (view !== 'none') {
-          emit('opened')
+            emitOpened();
         } else {
-          emit('closed')
+            emitClosed();
         }
       }
     }
 
     watchEffect(() => {
-      if (props.disabled) viewShown.value = 'none'
+      if (props.disabled){
+        viewShown.value = 'none';
+        isOpen.value = false;
+      }
     })
 
     const updatePageDate = (
@@ -354,7 +374,7 @@ export default defineComponent({
         renderView('none')
         emit('update:modelValue', date)
       } else {
-        viewShown.value = 'month'
+        viewShown.value = 'month';
       }
     }
     const selectMonth = (date: Date) => {
@@ -364,7 +384,7 @@ export default defineComponent({
         renderView('none')
         emit('update:modelValue', date)
       } else {
-        viewShown.value = 'day'
+        viewShown.value = 'day';
       }
     }
     const selectDay = (date: Date) => {
@@ -374,7 +394,7 @@ export default defineComponent({
         renderView('none')
         emit('update:modelValue', date)
       } else {
-        viewShown.value = 'time'
+        viewShown.value = 'time';
       }
     }
 
@@ -393,7 +413,10 @@ export default defineComponent({
 
     const click = () => (isFocused.value = true)
 
-    const focus = () => renderView(initialView.value)
+    const focus = () => {
+        renderView(initialView.value);
+        emitOpened();
+    } 
 
     const blur = () => {
       isFocused.value = false;
@@ -404,7 +427,47 @@ export default defineComponent({
             emit('update:modelValue', null)
         }
 
-        renderView()
+        renderView();
+        emitClosed();
+    }
+
+    const keyDown = (event: KeyboardEvent) => {
+
+        if (props.typeable && props.mask){
+
+            if(!([event.key, event.code].includes("Backspace"))){
+
+                let value = inputRef.value!.value;
+                const key = event.key;
+
+                if ("0123456789".includes(key)) { // If the key is a number
+            
+                    // Check if a separator should be added at the current position
+                    const separator = separators.find(item => value.length === item.idx);
+                    if(separator) {
+                        value += separator.char; // Aggiunge il separatore
+                    }
+            
+                    value += key; // Add the key pressed to the value
+   
+                } else {
+
+                    // If the key is not a number, check if it's being inserted at a separator position
+                    const separator = separators.find(item => value.length === item.idx);
+                    if(separator) {
+                        // If a separator should be at this position, replace the character with the correct separator
+                        value += separator.char; // Add the key pressed to the value
+                    }
+     
+                }
+
+                inputRef.value!.value = value;
+
+                event.preventDefault();
+                return false;
+            }
+        
+        }
     }
 
     const keyUp = (event: KeyboardEvent) => {
@@ -418,50 +481,10 @@ export default defineComponent({
       if (closeButton) {
         inputRef.value!.blur()
       }
+
       if (props.typeable) {
 
-        if(props.mask){
-
-            if(!([event.key, event.code].includes("Backspace"))){
-
-                let value = inputRef.value!.value;
-                const key = event.key;
-
-                if ("0123456789".includes(key)) { // If the key is a number
-                    value = value.slice(0, -1); // Remove the last character added automatically to the value
-            
-                    // Check if a separator should be added at the current position
-                    const separator = separators.find(item => value.length === item.idx);
-                    if(separator) {
-                        value += separator.char; // Aggiunge il separatore
-                    }
-            
-                    value += key; // Add the key pressed to the value
-
-                } else {
-
-                    // If the key is not a number, check if it's being inserted at a separator position
-                    const separator = separators.find(item => value.length === item.idx + 1);
-                    if(separator) {
-                        // If a separator should be at this position, replace the character with the correct separator
-                        value = value.slice(0, -1) + separator.char; // Aggiunge il separatore
-                    }
-                }
-
-                // Check again if a separator should be added at the current position
-                const separator = separators.find(item => value.length === item.idx);
-                if(separator) {
-                    value += separator.char;
-                }
-                inputRef.value!.value = value;
-
-            } 
-
-        }
-
         const parsedDate = dateParser(inputRef.value!.value);
-
-        //console.log("parsedDate", parsedDate)
 
         // If the date is formatted back same way as it was inputted, then we're not disturbing user input
         if (isValidDate(parsedDate)) {
@@ -469,10 +492,12 @@ export default defineComponent({
           emit('update:modelValue', parsedDate)
         }
       }
+
     }
 
     const isValidDate = (date: Date) => {
-        return isValid(date) && input.value === format(date, props.inputFormat, { locale: props.locale });
+        let value = inputRef.value!.value;
+        return isValid(date) && value === format(date, props.inputFormat, { locale: props.locale });
     };
     
     const dateParser = (_text: string) => {
@@ -483,7 +508,6 @@ export default defineComponent({
           { locale: props.locale }
         )
     };
-
 
     const initialView = computed(() => {
       const startingViewOrder = TIME_RESOLUTIONS.indexOf(props.startingView)
@@ -534,6 +558,7 @@ export default defineComponent({
       selectDay,
       selectTime,
       keyUp,
+      keyDown,
       viewShown,
       goBackFromTimepicker,
       clearModelValue,
